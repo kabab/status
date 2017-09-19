@@ -1,0 +1,45 @@
+{
+  "name": "status-spider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "dependencies": {
+    "amqplib": "^0.5.1",
+    "body-parser": "^1.18.1",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.11",
+    "morgan": "^1.8.2",
+    "phantom": "^4.0.5",
+    "request": "^2.81.0",
+    "webpage": "^0.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "*",
+    "babel-preset-latest": "^6.24.1",
+    "eslint": "^3.19.0",
+    "jest-cli": "*"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "build": "babel src -d dist",
+    "start": "node dist/worker.js",
+    "clean": "rm -rf dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "testFileExtensions": [
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "testDirectoryName": "spec"
+  }
+}
